@@ -96,9 +96,9 @@ nav ul li a{
     #click:checked ~ ul{
       left: 0%;
     }
-    
+
     nav ul li{
-      margin: 50px 0; 
+      margin: 50px 0;
     }
 
     nav ul li a{
@@ -753,7 +753,7 @@ footer li{
 /* --------------------> COLORS <------------------------ */
 
 .bg-grey{
-  background-color: #a9a08e;
+  background-color: #111;
 }
 
 .bg-pink{
@@ -770,91 +770,211 @@ footer li{
 
 /* --------------------> COLORS <------------------------ */
 /* --------------------> CONTACT FORM <------------------------ */
-.contact-form-wrapper {
-  padding: 100px 0;
+.contact-container{
+	position: relative;
+	width: 100%;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 100px 35px 100px;
 }
 
-.contact-form {
-  padding: auto;
-  background-color: #ffffff;
-  border-radius: 12px;
-  max-width: 400px;
+.contact-container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
 }
 
-.contact-form textarea {
-  resize: none;
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
-.contact-form .form-input,
-.form-text-area {
-  background-color: #f0f4f5;
-  height: 50px;
-  padding-left: 16px;
+.left{
+	height: 100%;
 }
 
-.contact-form .form-text-area {
-  background-color: #f0f4f5;
-  height: auto;
-  padding-left: 16px;
+iframe{
+  width: 100%;
+  height: 100%;
 }
 
-.contact-form .form-control::placeholder {
-  color: #aeb4b9;
-  font-weight: 500;
-  opacity: 1;
+.right{
+	padding: 25px 40px;
 }
 
-.contact-form .form-control:-ms-input-placeholder {
-  color: #aeb4b9;
-  font-weight: 500;
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
 }
 
-.contact-form .form-control::-ms-input-placeholder {
-  color: #aeb4b9;
-  font-weight: 500;
+.contact:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #cb3b06;
 }
 
-.contact-form .form-control:focus {
-  border-color: #cb3b06;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #cb3b06;
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
 }
 
-.contact-form .title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
-.contact-form .description {
-  color: #aeb4b9;
-  font-size: 14px;
-  text-align: center;
+textarea{
+	min-height: 150px;
 }
 
-.contact-form .submit-button-wrapper {
-  text-align: center;
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #cb3b06;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
 }
 
-.contact-form .submit-button-wrapper input {
-  border: none;
-  border-radius: 4px;
-  background-color: #cb3b06;
-  color: white;
-  text-transform: uppercase;
-  padding: 10px 50px;
-  font-weight: 500;
-  letter-spacing: 2px;
+.btn:hover{
+    background-color: #cb3b06;
 }
 
-.contact-form .submit-button-wrapper input:hover {
-  background-color: #cb3b06;
+.field:focus{
+    border: 2px solid #cb3b06b1;
+    background-color: #fff;
 }
 
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 300px;
+	}
+
+  iframe{
+    width: 100%;
+    height: 300px;
+  }
+}
 /* -------------------->ENDS CONTACT FORM <------------------------ */
-
-.tienda{
-  height: 50vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* -------------------->INICIA SERVICIOS <------------------------ */
+.servicios-main{
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.servicios-main h1 {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.servicios-main img {
+  height: 250px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.serv-btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.serv-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.serv-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.serv-cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .serv-cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .serv-cards_item {
+    width: 33.3333%;
+  }
+}
+
+.serv-card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.serv-card_content {
+  padding: 1rem;
+  background-color: #111;
+}
+
+.serv-card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.serv-card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+
+/* -------------------->ENDS SERVICIOS <------------------------ */
