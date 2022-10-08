@@ -128,60 +128,97 @@
 }
 
 @media screen and (max-width: 750px) {
-    .headshot-grid {
-      --num-cols: 2;
-      --row-height: 400px;
-    }
+  .headshot-grid {
+    --num-cols: 2;
+    --row-height: 400px;
+  }
   
-    .mision-grid {
-      --num-cols: 1;
-      --row-height: auto;
-    }
+  .mision-grid {
+    --num-cols: 1;
+    --row-height: auto;
+  }
   
-    .work-grid {
-      --num-cols: 2;
-      --row-height: 400px;
-    }
+  .work-grid {
+    --num-cols: 2;
+    --row-height: 400px;
+  }
     
-    .serv-cards {
-        margin: 0 3rem;
+  .serv-cards {
+    margin: 0 3rem;
+  }
+
+  .hero-title{
+    h2{
+      font-size: 4.2rem;
     }
+
+    h3{
+      font-size: 2rem;
+    }
+  }
+
 }
 
 @media screen and (max-width: 550px) {
-    .headshot-grid {
-      --num-cols: 1;
-      --row-height: 600px;
-    }
+  .headshot-grid {
+    --num-cols: 1;
+    --row-height: 600px;
+  }
   
-    .headshot-grid .card-item .card-details {
-      margin: 1rem;
-    }
+  .headshot-grid .card-item .card-details {
+    margin: 1rem;
+  }
   
-    .mision-grid {
-      --num-cols: 1;
-      --row-height: auto;
-    }
+  .mision-grid {
+    --num-cols: 1;
+    --row-height: auto;
+  }
   
-    .work-grid {
-      display: block;
-    }
+  .work-grid {
+    display: block;
+  }
   
-    .work-grid .card-item2{
-      margin-bottom: 1rem;
-    }
+  .work-grid .card-item2{
+    margin-bottom: 1rem;
+  }
   
-    .card-item:hover .card-details{
-      transform: scale(1.10);
-    }
+  .card-item:hover .card-details{
+    transform: scale(1.10);
+  }
 
-    .serv-cards {
-        margin: 0 2rem;
+  .serv-cards {
+    margin: 0 2rem;
+  }
+
+  .hero-title{
+    h2{
+      padding-left: 2rem;
+      font-size: 3.5rem;
     }
+  
+    h3{
+      font-size: 2rem;
+      padding-left: 2rem;
+    }
+  }
 }
 
-@media (max-width:320px) {
-    .footer-creds{
-      flex-flow: column;
+@media (max-width:460px) {
+  .footer-creds{
+    flex-flow: column;
+  }
+
+  .hero-title{
+    h2{
+      padding-left: 1.5rem;
+      font-size: 3rem;
     }
+  
+    h3{
+      font-size: 2rem;
+      padding-left: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
 }
