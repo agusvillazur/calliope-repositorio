@@ -1,0 +1,143 @@
+//PORTFOLIO
+.work-grid {
+    margin: 0 0.1rem;
+    --gap: 5px;
+    --num-cols: 5;
+    --row-height: 250px;
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols),minmax(20px,1fr));
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    grid-auto-flow: dense;
+
+    img{
+        @include size(100%,100%);
+        object-fit: cover;
+        border-radius: 2px;
+        transition: 0.5s ease-in-out all;
+        object-position: 50% 50%;
+        filter: grayscale(100%);
+        &:hover{
+            transform: scale(1.01);
+            filter: grayscale(0);
+        }
+    }
+}
+
+//MISION
+.mision-title{
+    h2{
+        @include texto ($textM, $keyColor, $textExtraBold);
+        padding: 0 1rem 3rem 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+.mision-grid {
+    margin: 0 0.1rem;
+    --gap: 5px;
+    --num-cols: 2;
+    --row-height: 400px;
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols),minmax(20px,1fr));
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+
+    img{
+        @include size (100%,100%);
+        object-fit: cover;
+        border-radius: 2px;
+        filter: grayscale(100%);
+    }
+    .info{
+        padding: 3rem 2rem;
+        h2{
+            @include texto (2.2rem, $keyColor, $textExtraBold);
+            line-height: 30px;
+            padding: 0;
+            text-align: left;
+        }
+        p{
+            margin-top: 50px;
+            font-size: map-get($map: $fontSize, $key: 'dos' );
+        }
+    }
+}
+
+//SERVICIOS
+h1{
+    text-align: center;
+}
+.serv-cards {
+    margin: 0 4rem;
+    --gap: 40px;
+    --num-cols: 3;
+    --row-height: 500px;
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols),minmax(20px,1fr));
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    grid-auto-flow: dense;
+
+    .serv-card{
+        background-color: $grey;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.18);
+        .serv-card_conteiner{
+            position: relative;
+            clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+        }
+        img{
+            @include size (100%, 270px);
+            display: block;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+        }
+        .serv-card_details{
+            padding: 20px;
+            h2{
+                @include texto (2rem, $mainColor, $textBold);
+            }
+            p{
+                @include texto ($textXsm, $mainColor, $textLight);
+            }
+            .serv-btn{
+                margin-top: 35px;
+                @include texto(14px, $mainColor, 400);
+                color: $mainColor;
+                padding: 0.8rem;
+                text-transform: uppercase;
+                border-radius: 4px;
+                display: block;
+                width: $w-100;
+                cursor: pointer;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                background: transparent;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.12);
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+  
+
+
+

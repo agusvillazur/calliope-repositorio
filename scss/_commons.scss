@@ -1,0 +1,132 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$fontMain:'Poppins';
+
+$fontSize:(
+    'cero': 0.8rem,
+    'uno': 1rem,
+    'dos': 1.2rem,
+    'tres': 2rem,
+    'cuatro': 2.5rem,
+    'cinco': 3rem,
+)
+
+;
+$textM: 3rem;
+$textS: 2rem;
+$textXsm: 1.1rem;
+
+$textLight: 300;
+$textNormal: 500;
+$textBold: 600;
+$textExtraBold: 700;
+
+*{
+    font-family: $fontMain;
+}
+
+//variables globales
+
+$mainColor:rgb(255, 255, 255);
+$secondaryColor: rgb(0, 0, 0);
+$keyColor:rgb(203, 59, 6);
+$grey:rgb(17, 17, 17);
+$purple:rgb(29, 22, 30);
+$footerColor:rgb(87, 97, 113);
+$shadowColor: rgba(203, 59, 6, 0.807)
+
+//sizing
+;
+$w-100:100%;
+$w-75:75%;
+$w-50:50%;
+$w-25:25%;
+$h-100:100%;
+$h-full:100vh;
+
+*{
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+//backgrounds
+
+.bg-grey{
+    background-color: rgb(17, 17, 17);
+}
+  
+.bg-orange{
+    background-color: #cb3b06;
+}
+  
+.bg-purple{
+    background-color: rgb(29, 22, 30);
+}
+
+//grid sizing
+
+.w-6{
+    grid-column: span 6;
+}
+.w-5{
+    grid-column: span 5;
+}  
+.w-4{
+    grid-column: span 4;
+}  
+.w-3{
+    grid-column: span 3;
+}  
+.w-2{
+    grid-column: span 2;
+}  
+.w-1{
+    grid-column: span 1;
+}  
+.h-4{
+    grid-row: span 4;
+}  
+.h-3{
+    grid-row: span 3;
+}  
+.h-2{
+    grid-row: span 2;
+}  
+.h-1{
+    grid-row: span 1;
+}
+
+
+//mixins
+
+@mixin texto ($fontsize, $color, $fontweight){
+    font-family: 'Poppins';
+    font-size: $fontsize;
+    color: $color;
+    font-weight: $fontweight;
+}
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;    
+}
+
+@mixin align ($align, $justify, $text){
+    align-items: $align;
+    justify-content: $justify;
+    text-align: $text;
+}
+
+    
+
+

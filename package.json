@@ -1,0 +1,26 @@
+{
+  "name": "calliope-repositorio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+    "sass:watch": "sass --watch scss/main.scss  css/main.css",
+    "build": "purgecss --css css/main.css --content *.html -o css/reducido.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agusvillazur/calliope-repositorio.git"
+  },
+  "author": "Agustina Villazur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agusvillazur/calliope-repositorio/issues"
+  },
+  "homepage": "https://github.com/agusvillazur/calliope-repositorio#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "sass": "^1.55.0"
+  }
+}

@@ -1,0 +1,187 @@
+@media screen and (max-width: 1300px) {
+    .headshot-grid {
+      --num-cols: 4;
+      --row-height: 300px;
+    }
+  
+    .mision-grid {
+      --num-cols: 2;
+      --row-height: auto;
+    }
+  
+    .work-grid {
+      --num-cols: 4;
+      --row-height: 300px;
+    }
+  
+    .oficinas-grid{
+      --num-cols: 4;
+      --row-height: auto;
+    }
+  
+    .index-grid{
+      --num-cols: 6;
+      --row-height: 300px;
+    }
+
+    .serv-cards {
+        --num-cols: 2;
+        --row-height: 520px;
+    }
+  
+}
+
+@media (max-width: 1000px){
+    .botonera{
+        .menu-btn{
+             i{
+                 display: block;
+             }     
+         }
+         ul{
+             position: fixed;
+             top: 85px;
+             left: -100%;
+             background: $grey;
+             @include size (100%, 100vh);
+             display: block;
+             z-index: 1000;
+             padding-left: 0px;
+             text-align: center;
+             transition: all 0.4s ease;
+             li{
+                 margin: 50px 0;
+                 a{
+                     font-size: map-get($map: $fontSize, $key:'tres');
+                     display: block;
+                     color: $mainColor;
+                     &:hover{
+                         color: $mainColor;
+                     }
+                 }
+             }
+         }
+     }
+     #click:checked ~ .menu-btn i:before{
+       content: "\f00d";
+     }
+     #click:checked ~ ul{
+       left: 0%;
+     }
+}
+
+@media (max-width: 940px) {
+    .hero-title {
+        font-size: 80%;
+    }    
+    .index-grid {
+        --num-cols: 3;
+        --row-height: 300px;
+    } 
+    .headshot-grid {
+        --num-cols: 3;
+        --row-height: 300px;
+    }  
+    .work-grid {
+        --num-cols: 3;
+        --row-height: 300px;
+    }
+    .mision-grid {
+        --num-cols: 1;
+        --row-height: auto;
+    }
+    .oficinas-grid{
+        --num-cols: 2;
+        --row-height: auto;
+    }
+
+    .serv-cards {
+        --num-cols: 2;
+        --row-height: 535px;
+    }
+
+    .index-grid {
+        display: block;
+    }
+    
+    .index-grid .index-item2{
+        margin-bottom: 1rem;
+    }
+    
+    .index-grid .index-item{
+        margin-bottom: 1rem;
+    }
+  
+    .serv-cards {
+        display: block;
+    }
+  
+    .serv-card {
+        margin-bottom: 2rem;
+    }
+
+    .contact-box {
+        display: block;
+        min-width: 420px;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .headshot-grid {
+      --num-cols: 2;
+      --row-height: 400px;
+    }
+  
+    .mision-grid {
+      --num-cols: 1;
+      --row-height: auto;
+    }
+  
+    .work-grid {
+      --num-cols: 2;
+      --row-height: 400px;
+    }
+    
+    .serv-cards {
+        margin: 0 3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .headshot-grid {
+      --num-cols: 1;
+      --row-height: 600px;
+    }
+  
+    .headshot-grid .card-item .card-details {
+      margin: 1rem;
+    }
+  
+    .mision-grid {
+      --num-cols: 1;
+      --row-height: auto;
+    }
+  
+    .work-grid {
+      display: block;
+    }
+  
+    .work-grid .card-item2{
+      margin-bottom: 1rem;
+    }
+  
+    .card-item:hover .card-details{
+      transform: scale(1.10);
+    }
+
+    .serv-cards {
+        margin: 0 2rem;
+    }
+}
+
+@media (max-width:320px) {
+    .footer-creds{
+      flex-flow: column;
+    }
+}

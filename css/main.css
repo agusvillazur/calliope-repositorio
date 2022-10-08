@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.bg-grey {
+  background-color: rgb(17, 17, 17);
+}
+
+.bg-orange {
+  background-color: #cb3b06;
+}
+
+.bg-purple {
+  background-color: rgb(29, 22, 30);
+}
+
+.w-6 {
+  grid-column: span 6;
+}
+
+.w-5 {
+  grid-column: span 5;
+}
+
+.w-4 {
+  grid-column: span 4;
+}
+
+.w-3 {
+  grid-column: span 3;
+}
+
+.w-2 {
+  grid-column: span 2;
+}
+
+.w-1 {
+  grid-column: span 1;
+}
+
+.h-4 {
+  grid-row: span 4;
+}
+
+.h-3 {
+  grid-row: span 3;
+}
+
+.h-2 {
+  grid-row: span 2;
+}
+
+.h-1 {
+  grid-row: span 1;
+}
+
+.botonera {
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+.botonera ul {
+  list-style: none;
+  font-weight: 300;
+  display: flex;
+  margin-top: 16px;
+}
+.botonera a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding-left: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.botonera a:hover {
+  letter-spacing: 6px;
+  font-weight: 600;
+  color: rgb(17, 17, 17);
+}
+
+.logo a {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  text-transform: none;
+  font-size: 3rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logo::first-letter {
+  color: rgb(203, 59, 6);
+}
+
+.menu-btn i {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+#click {
+  display: none;
+}
+
+.index-grid {
+  margin: 0 0.01rem;
+  --gap: 5px;
+  --num-cols: 6;
+  --row-height: 250px;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), minmax(20px, 1fr));
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+  grid-auto-flow: dense;
+}
+.index-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1px;
+  transition: 0.5s ease-in-out all;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  position: relative;
+}
+.index-grid .index-item {
+  position: relative;
+  cursor: pointer;
+}
+.index-grid .index-item:hover .index-details {
+  transform: all 0.4s ease-out;
+  opacity: 1;
+}
+
+.hero-title {
+  height: 100%;
+  background: linear-gradient(rgba 0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+.hero-title h2 {
+  padding: 3rem 3rem 1rem 3rem;
+  font-size: 6.2em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px rgba(203, 59, 6, 0.807);
+}
+.hero-title h3 {
+  padding: 0 3rem;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 0.8em;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px rgba(203, 59, 6, 0.807);
+}
+.hero-title a {
+  display: inline-block;
+  font-size: 1em;
+  background: rgb(255, 255, 255);
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: rgb(17, 17, 17);
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.hero-title a:hover {
+  letter-spacing: 6px;
+}
+
+.boton-index {
+  margin: 3rem 3rem 5rem 3rem;
+}
+
+.index-details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+  transition-delay: 0.2s;
+  opacity: 0;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+.index-details h1 {
+  padding: 3.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 2px 0;
+}
+.index-details h4 {
+  font-size: 1.9rem;
+}
+.index-details a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.index-cards {
+  padding: 3rem;
+}
+.index-cards h2 {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+.index-cards h3 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  line-height: 30px;
+  font-weight: 300;
+}
+.index-cards a {
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  line-height: 3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.social {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social li {
+  align-items: center;
+  margin-top: 2.6rem;
+  list-style: none;
+}
+.social li a {
+  display: inline-block;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 3.5rem;
+  transition: 0.5s;
+}
+.social li a:hover {
+  transform: translateY(-10px);
+}
+
+.work-grid {
+  margin: 0 0.1rem;
+  --gap: 5px;
+  --num-cols: 5;
+  --row-height: 250px;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), minmax(20px, 1fr));
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+  grid-auto-flow: dense;
+}
+.work-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2px;
+  transition: 0.5s ease-in-out all;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  filter: grayscale(100%);
+}
+.work-grid img:hover {
+  transform: scale(1.01);
+  filter: grayscale(0);
+}
+
+.mision-title h2 {
+  font-family: "Poppins";
+  font-size: 3rem;
+  color: rgb(203, 59, 6);
+  font-weight: 700;
+  padding: 0 1rem 3rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mision-grid {
+  margin: 0 0.1rem;
+  --gap: 5px;
+  --num-cols: 2;
+  --row-height: 400px;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), minmax(20px, 1fr));
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+.mision-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2px;
+  filter: grayscale(100%);
+}
+.mision-grid .info {
+  padding: 3rem 2rem;
+}
+.mision-grid .info h2 {
+  font-family: "Poppins";
+  font-size: 2.2rem;
+  color: rgb(203, 59, 6);
+  font-weight: 700;
+  line-height: 30px;
+  padding: 0;
+  text-align: left;
+}
+.mision-grid .info p {
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.serv-cards {
+  margin: 0 4rem;
+  --gap: 40px;
+  --num-cols: 3;
+  --row-height: 500px;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), minmax(20px, 1fr));
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+  grid-auto-flow: dense;
+}
+.serv-cards .serv-card {
+  background-color: rgb(17, 17, 17);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+.serv-cards .serv-card .serv-card_conteiner {
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.serv-cards .serv-card img {
+  width: 100%;
+  height: 270px;
+  display: block;
+  border-radius: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.serv-cards .serv-card .serv-card_details {
+  padding: 20px;
+}
+.serv-cards .serv-card .serv-card_details h2 {
+  font-family: "Poppins";
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.serv-cards .serv-card .serv-card_details p {
+  font-family: "Poppins";
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+.serv-cards .serv-card .serv-card_details .serv-btn {
+  margin-top: 35px;
+  font-family: "Poppins";
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+.serv-cards .serv-card .serv-card_details .serv-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.team-name {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}
+.team-name h2 {
+  font-family: "Poppins";
+  font-size: 1.3rem;
+  color: rgb(203, 59, 6);
+  font-weight: 600;
+}
+
+.headshot-grid {
+  margin: 0 0.1rem;
+  --gap: 10px;
+  --num-cols: 6;
+  --row-height: 300px;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), minmax(20px, 1fr));
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+.headshot-grid .card-item {
+  position: relative;
+}
+.headshot-grid .card-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2px;
+  transition: 0.4s ease-in-out all;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.headshot-grid .card-item img:hover {
+  transform: scale(1.01);
+}
+.headshot-grid .card-item:hover .card-details {
+  opacity: 1;
+  background-color: rgb(203, 59, 6);
+  border-radius: 5px;
+  width: 200px;
+}
+.headshot-grid .card-item .card-details {
+  position: absolute;
+  margin: 0.5rem;
+  padding: 10px 10px;
+  bottom: 0px;
+  opacity: 0;
+  transition: 0.4s ease-in-out all;
+  width: 200px;
+}
+.headshot-grid .card-item .card-details h1 {
+  text-align: left;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.headshot-grid .card-item .card-details p {
+  font-family: "Poppins";
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+.headshot-grid .card-item .card-details a {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0px 100px 35px 100px;
+}
+.contact-container::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.contact-container .contact-box {
+  max-width: 950px;
+  margin: 1rem 0 1.5rem 0;
+  --gap: 0;
+  --num-cols: 2;
+  --row-height: auto;
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact-container .contact-box .left {
+  height: 100%;
+}
+.contact-container .contact-box .left iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact-container .contact-box .right {
+  padding: 25px 40px;
+}
+.contact-container .contact-box .right h2 {
+  text-align: center;
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+}
+.contact-container .contact-box .right h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: rgb(203, 59, 6);
+}
+.contact-container .contact-box .right .field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+.contact-container .contact-box .right .field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.contact-container .contact-box .right .field:focus {
+  border: 2px solid rgba(203, 59, 6, 0.6941176471);
+  background-color: rgb(255, 255, 255);
+}
+.contact-container .contact-box .right textarea {
+  min-height: 150px;
+}
+.contact-container .contact-box .right .btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: rgb(203, 59, 6);
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-container .contact-box .right .btn:hover {
+  color: rgb(0, 0, 0);
+}
+
+.quote-grid {
+  margin: 6rem;
+  --gap: 0px;
+  --num-cols: 2;
+  --row-height: auto;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), minmax(20px, 1fr));
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+.quote-grid h2 {
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  color: rgb(87, 97, 113);
+  font-weight: 300;
+  margin-top: 1.5rem;
+}
+
+.oficinas-grid {
+  margin: 4rem 4rem;
+  --gap: 0px;
+  --num-cols: 6;
+  --row-height: auto;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), minmax(20px, 1fr));
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+.oficinas-grid h2 {
+  font-family: "Poppins";
+  font-size: 1.1rem;
+  color: rgb(203, 59, 6);
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+.oficinas-grid p {
+  font-size: 0.8rem;
+}
+
+.footer {
+  width: 100%;
+}
+.footer ul {
+  padding: 0;
+}
+.footer li {
+  list-style: none;
+}
+.footer .footer-creds {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(87, 97, 113);
+  font-size: 0.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.footer .footer-creds .copy-creds {
+  padding-left: 1rem;
+}
+.footer .footer-creds .socials ul {
+  display: flex;
+  flex-flow: row;
+}
+.footer .footer-creds .socials li {
+  padding-right: 1rem;
+}
+.footer .footer-creds .socials a {
+  color: rgb(87, 97, 113);
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .headshot-grid {
+    --num-cols: 4;
+    --row-height: 300px;
+  }
+  .mision-grid {
+    --num-cols: 2;
+    --row-height: auto;
+  }
+  .work-grid {
+    --num-cols: 4;
+    --row-height: 300px;
+  }
+  .oficinas-grid {
+    --num-cols: 4;
+    --row-height: auto;
+  }
+  .index-grid {
+    --num-cols: 6;
+    --row-height: 300px;
+  }
+  .serv-cards {
+    --num-cols: 2;
+    --row-height: 520px;
+  }
+}
+@media (max-width: 1000px) {
+  .botonera .menu-btn i {
+    display: block;
+  }
+  .botonera ul {
+    position: fixed;
+    top: 85px;
+    left: -100%;
+    background: rgb(17, 17, 17);
+    width: 100%;
+    height: 100vh;
+    display: block;
+    z-index: 1000;
+    padding-left: 0px;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+  .botonera ul li {
+    margin: 50px 0;
+  }
+  .botonera ul li a {
+    font-size: 2rem;
+    display: block;
+    color: rgb(255, 255, 255);
+  }
+  .botonera ul li a:hover {
+    color: rgb(255, 255, 255);
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  #click:checked ~ ul {
+    left: 0%;
+  }
+}
+@media (max-width: 940px) {
+  .hero-title {
+    font-size: 80%;
+  }
+  .index-grid {
+    --num-cols: 3;
+    --row-height: 300px;
+  }
+  .headshot-grid {
+    --num-cols: 3;
+    --row-height: 300px;
+  }
+  .work-grid {
+    --num-cols: 3;
+    --row-height: 300px;
+  }
+  .mision-grid {
+    --num-cols: 1;
+    --row-height: auto;
+  }
+  .oficinas-grid {
+    --num-cols: 2;
+    --row-height: auto;
+  }
+  .serv-cards {
+    --num-cols: 2;
+    --row-height: 535px;
+  }
+  .index-grid {
+    display: block;
+  }
+  .index-grid .index-item2 {
+    margin-bottom: 1rem;
+  }
+  .index-grid .index-item {
+    margin-bottom: 1rem;
+  }
+  .serv-cards {
+    display: block;
+  }
+  .serv-card {
+    margin-bottom: 2rem;
+  }
+  .contact-box {
+    display: block;
+    min-width: 420px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .headshot-grid {
+    --num-cols: 2;
+    --row-height: 400px;
+  }
+  .mision-grid {
+    --num-cols: 1;
+    --row-height: auto;
+  }
+  .work-grid {
+    --num-cols: 2;
+    --row-height: 400px;
+  }
+  .serv-cards {
+    margin: 0 3rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .headshot-grid {
+    --num-cols: 1;
+    --row-height: 600px;
+  }
+  .headshot-grid .card-item .card-details {
+    margin: 1rem;
+  }
+  .mision-grid {
+    --num-cols: 1;
+    --row-height: auto;
+  }
+  .work-grid {
+    display: block;
+  }
+  .work-grid .card-item2 {
+    margin-bottom: 1rem;
+  }
+  .card-item:hover .card-details {
+    transform: scale(1.1);
+  }
+  .serv-cards {
+    margin: 0 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .footer-creds {
+    flex-flow: column;
+  }
+}/*# sourceMappingURL=main.css.map */
